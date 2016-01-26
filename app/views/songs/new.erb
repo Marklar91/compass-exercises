@@ -12,15 +12,15 @@
 <form method="post" action="/songs">
 	<div>
 		<label>Artist:</label>
-		<input type="text" name="artist">
+		<input type="text" name="artist" value="<%= @song.artist %>">
 	</div>
 	<div>
 		<label>Song:</label>
-		<input type="text" name="song">
+		<input type="text" name="song" value="<%= @song.song %>">
 	</div>
 	<div>
 		<label>Url:</label>
-		<input type="text" name="url">
+		<input type="text" name="url" value="<%= @song.url %>">
 	</div>
 	<div>
 		<input type="submit" value="Submit">
