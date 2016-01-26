@@ -14,11 +14,19 @@ post '/songs' do
 		url: params[:content],
 		artist: params[:artist]
 		)
-	song.save
+	if @song.save
 	redirect '/songs'
+	else
+		erb :'messages/new'
+	end
 end
 
 get '/songs/new' do
 	erb :'songs/new'
+end
+
+get '/songs/:id' do
+	@song = Song.find params [:id]
+	erb :'songs/show'
 end
 
